@@ -1,7 +1,8 @@
-streamlit== 1.50.0
-pandas== 2.0.3
-openpyxl == 3.0.10
-reportlab == 4.4.4
-NumPy == 1.26.4
-Torch  ==2.2.0
-transformers== 5
+streamlit==1.50.0
+pandas==2.0.3
+openpyxl==3.0.10
+reportlab==4.4.4
+numpy==1.26.4
+torch==2.2.0
+transformers==5.0.0
+sentence-transformers
