@@ -1,4 +1,7 @@
- streamlit: 1.50.0
- pandas: 2.0.3
- openpyxl: 3.0.10
- reportlab: 4.4.4
+streamlit: 1.50.0
+pandas: 2.0.3
+openpyxl: 3.0.10
+reportlab: 4.4.4
+NumPy version: 1.26.4
+PyTorch version: 2.2.0+cpu
+Sentence Transformers version: 5
