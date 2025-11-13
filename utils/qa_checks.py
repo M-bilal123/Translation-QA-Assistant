@@ -14,7 +14,6 @@ import logging
 from typing import Dict, List, Tuple, Any, Optional
 from collections import Counter, defaultdict
 from functools import lru_cache
-
 import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer, util
