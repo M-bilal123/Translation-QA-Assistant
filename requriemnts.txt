@@ -3,5 +3,5 @@ pandas: 2.0.3
 openpyxl: 3.0.10
 reportlab: 4.4.4
 NumPy version: 1.26.4
-Torch version: 2.2.0+cpu
+Torch version: 2.2.0
 Sentence Transformers version: 5
