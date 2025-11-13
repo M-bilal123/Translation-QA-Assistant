@@ -34,9 +34,9 @@ if not logger.handlers:
     logger.addHandler(ch)
 
 #sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 we can use this for faster download
-from sentence_transformers import SentenceTransformer
-import torch
-import logging
+# from sentence_transformers import SentenceTransformer
+# import torch
+# import logging
 
 logger = logging.getLogger(__name__)
 
