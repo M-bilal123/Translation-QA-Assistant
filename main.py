@@ -598,6 +598,8 @@
 # if __name__ == "__main__":
 #     main()
 
+import sys
+print("Python executable:", sys.executable)
 
 """
 QLingo - AI-Powered Translation QA Platform
