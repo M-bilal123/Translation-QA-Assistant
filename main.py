@@ -613,6 +613,7 @@ logger = logging.getLogger(__name__)
 # -------------------------
 # List of required packages
 # -------------------------
+subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "setuptools", "pip"])
 required_packages = {
     "streamlit": "1.51.0",
     "pandas": "2.0.3",
