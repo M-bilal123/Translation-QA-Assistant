@@ -7,3 +7,4 @@ torch==2.2.0+cpu
 transformers==5.1.1
 sentence-transformers==2.2.2
 langdetect==1.0.9
+setuptools==39.1.0
