@@ -5,7 +5,7 @@ reportlab==4.4.4
 numpy==1.26.4
 torch
 torchvision 
-transformers==5.1.1
+transformers
 sentence-transformers==2.2.2
 langdetect==1.0.9
 setuptools==39.1.0
