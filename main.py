@@ -598,8 +598,56 @@
 # if __name__ == "__main__":
 #     main()
 
+# main.py
+import subprocess
 import sys
-print("Python executable:", sys.executable)
+import pkg_resources
+import logging
+
+# -------------------------
+# Logger setup
+# -------------------------
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# -------------------------
+# List of required packages
+# -------------------------
+required_packages = {
+    "streamlit": "1.51.0",
+    "pandas": "2.0.3",
+    "openpyxl": "3.0.10",
+    "reportlab": "4.4.4",
+    "numpy": "1.26.4",
+    "torch": "2.2.0+cpu",
+    "transformers": "5.1.1",
+    "sentence-transformers": "2.2.2",
+    "langdetect": "1.0.9"
+}
+
+# -------------------------
+# Function to install packages
+# -------------------------
+def install_packages(packages: dict):
+    for package, version in packages.items():
+        try:
+            pkg_resources.get_distribution(package)
+            logger.info(f"{package} already installed.")
+        except pkg_resources.DistributionNotFound:
+            logger.info(f"{package} not found. Installing {package}=={version} ...")
+            # For torch CPU-only installation
+            if package == "torch" and "+cpu" in version:
+                subprocess.check_call([sys.executable, "-m", "pip", "install", f"torch=={version}", "--index-url", "https://download.pytorch.org/whl/cpu"])
+            else:
+                subprocess.check_call([sys.executable, "-m", "pip", "install", f"{package}=={version}"])
+
+# -------------------------
+# Install missing packages
+# -------------------------
+install_packages(required_packages)
+
+# -------------------------
+
 
 """
 QLingo - AI-Powered Translation QA Platform
